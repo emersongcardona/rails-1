@@ -5,5 +5,6 @@ class CreateDrivers < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    add_reference :cars, :drivers, foreign_key: true
   end
 end

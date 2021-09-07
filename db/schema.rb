@@ -10,18 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_07_033934) do
+ActiveRecord::Schema.define(version: 2021_09_07_052238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cars", force: :cascade do |t|
-    t.decimal "model"
+    t.integer "model"
     t.string "brand"
-    t.decimal "diver_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "drivers_id"
     t.string "code"
+    t.index ["drivers_id"], name: "index_cars_on_drivers_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "owners"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "drivers", force: :cascade do |t|
@@ -30,4 +37,5 @@ ActiveRecord::Schema.define(version: 2021_09_07_033934) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "cars", "drivers", column: "drivers_id"
 end
