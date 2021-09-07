@@ -1,0 +1,14 @@
+<%# <h1>Main#index</h1>
+<p>Find me in app/views/main/index.html.erb</p> %>
+<div id="resultado">
+
+</div>
+
+<%= form_tag "search/create", method: :get, remote: true, id: "search-form" do %>
+
+
+<%= text_field_tag :keyword, nil, placeholder: "ID de conductor"%>
+    <%= content_tag :button, type: :submit do %>
+    Search
+    <%end%>
+<%end%>
