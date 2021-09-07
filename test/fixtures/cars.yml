@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: 9.99
+  brand: MyString
+  diver_id: 9.99
+
+two:
+  model: 9.99
+  brand: MyString
+  diver_id: 9.99
