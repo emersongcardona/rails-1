@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "main#index"
+  root to:  "main#index"
   get 'search/create'
   resources :drivers
   resources :cars
