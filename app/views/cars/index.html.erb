@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Cars</h1>
+<h1><strong>Cars</strong></h1>
 
 <table>
   <thead>
@@ -8,12 +8,13 @@
       <th>Model</th>
       <th>Brand</th>
       <th>Diver</th>
-      <th>code</th>
+      <th>Code</th>
       <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
+  <table class="table">
     <% @cars.each do |car| %>
       <tr>
         <td><%= car.model %></td>
@@ -29,5 +30,6 @@
 </table>
 
 <br>
-
+<button class="button is-small"> 
 <%= link_to 'New Car', new_car_path %>
+</button>

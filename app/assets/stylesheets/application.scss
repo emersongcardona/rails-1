@@ -13,4 +13,31 @@
  *= require_tree .
  *= require_self
  */
-@import "bulma/bulma"
+@import "bulma/bulma";
+@import "modulo";
+
+@function nombre() {
+    @return 100%;
+}
+
+$principal: red;
+body {
+    .card {
+        height: 80vh;
+    }
+}
+
+html,
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $second;
+}
+body > footer {
+    margin-top: auto;
+}
+
+a{
+    color: rgb(0, 0, 0);
+}

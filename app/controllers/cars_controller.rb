@@ -6,6 +6,15 @@ class CarsController < ApplicationController
     @cars = Car.all
   end
 
+  #class method
+  def self.list
+    puts "metodo de clase"
+    @cars.each do |car|
+       m = car.model.to_s
+      return m
+    end
+  end  
+
   # GET /cars/1 or /cars/1.json
   def show
   end
